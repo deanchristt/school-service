@@ -1,0 +1,400 @@
+{
+  "info": {
+    "_postman_id": "78a570f2-c2c3-43da-bb28-26ef6ac35c49",
+    "name": "[SCHOOL-SERVICE]",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+    "_exporter_id": "21271865"
+  },
+  "item": [
+    {
+      "name": "School",
+      "item": [
+        {
+          "name": "Get All",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8100/serverside/schools"
+          },
+          "response": [
+            {
+              "name": "Get All",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": "http://localhost:8100/serverside/schools"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 May 2024 03:49:46 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Sekolah A\",\n        \"schoolType\": \"SD\",\n        \"classes\": [\n            {\n                \"id\": 1,\n                \"className\": \"Kelas 1A\",\n                \"classType\": \"IPA\"\n            },\n            {\n                \"id\": 2,\n                \"className\": \"Kelas 1B\",\n                \"classType\": \"IPS\"\n            }\n        ]\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Sekolah B\",\n        \"schoolType\": \"SMP\",\n        \"classes\": [\n            {\n                \"id\": 3,\n                \"className\": \"Kelas 2A\",\n                \"classType\": \"IPS\"\n            },\n            {\n                \"id\": 4,\n                \"className\": \"Kelas 2B\",\n                \"classType\": \"BAHASA\"\n            }\n        ]\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Sekolah C\",\n        \"schoolType\": \"SMA\",\n        \"classes\": [\n            {\n                \"id\": 5,\n                \"className\": \"Kelas 3A\",\n                \"classType\": \"IPA\"\n            },\n            {\n                \"id\": 6,\n                \"className\": \"Kelas 3B\",\n                \"classType\": \"IPS\"\n            }\n        ]\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Get By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8100/serverside/schools/9"
+          },
+          "response": [
+            {
+              "name": "Get By Id",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": "http://localhost:8100/serverside/schools/3"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 May 2024 03:49:38 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 3,\n    \"name\": \"Sekolah C\",\n    \"schoolType\": \"SMA\",\n    \"classes\": [\n        {\n            \"id\": 5,\n            \"className\": \"Kelas 3A\",\n            \"classType\": \"IPA\"\n        },\n        {\n            \"id\": 6,\n            \"className\": \"Kelas 3B\",\n            \"classType\": \"IPS\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Save",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"schoolName\": \"Sekolah Baru\",\n    \"schoolType\": \"SD\",\n    \"classes\": [\n        {\n            \"className\": \"Class Baru 1\",\n            \"classType\": \"BAHASA\"\n        },\n        {\n            \"className\": \"Class Baru 2\",\n            \"classType\": \"IPA\"\n        }\n    ]\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://localhost:8100/serverside/schools"
+          },
+          "response": [
+            {
+              "name": "Save",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"schoolName\": \"Sekolah Baru\",\n    \"schoolType\": \"SD\",\n    \"classes\": [\n        {\n            \"className\": \"Class Baru 1\",\n            \"classType\": \"BAHASA\"\n        },\n        {\n            \"className\": \"Class Baru 2\",\n            \"classType\": \"IPA\"\n        }\n    ]\n}\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "http://localhost:8100/serverside/schools"
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 May 2024 04:58:09 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 8,\n    \"name\": \"Sekolah Baru\",\n    \"schoolType\": \"SD\",\n    \"classes\": [\n        {\n            \"id\": 9,\n            \"className\": \"Class Baru 1\",\n            \"classType\": \"BAHASA\",\n            \"school\": {\n                \"id\": 8,\n                \"name\": \"Sekolah Baru\",\n                \"schoolType\": \"SD\"\n            }\n        },\n        {\n            \"id\": 10,\n            \"className\": \"Class Baru 2\",\n            \"classType\": \"IPA\",\n            \"school\": {\n                \"id\": 8,\n                \"name\": \"Sekolah Baru\",\n                \"schoolType\": \"SD\"\n            }\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "http://localhost:8100/serverside/schools/9"
+          },
+          "response": [
+            {
+              "name": "Delete",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": "http://localhost:8100/serverside/schools/9"
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "plain",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 May 2024 05:00:09 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Class",
+      "item": [
+        {
+          "name": "Get All",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8100/serverside/classes"
+          },
+          "response": [
+            {
+              "name": "Get All",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": "http://localhost:8100/serverside/classes"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 May 2024 05:15:26 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 1,\n        \"className\": \"Kelas 1A\",\n        \"schoolName\": \"Sekolah A\"\n    },\n    {\n        \"id\": 2,\n        \"className\": \"Kelas 1B\",\n        \"schoolName\": \"Sekolah A\"\n    },\n    {\n        \"id\": 3,\n        \"className\": \"Kelas 2A\",\n        \"schoolName\": \"Sekolah B\"\n    },\n    {\n        \"id\": 4,\n        \"className\": \"Kelas 2B\",\n        \"schoolName\": \"Sekolah B\"\n    },\n    {\n        \"id\": 5,\n        \"className\": \"Kelas 3A\",\n        \"schoolName\": \"Sekolah C\"\n    },\n    {\n        \"id\": 6,\n        \"className\": \"Kelas 3B\",\n        \"schoolName\": \"Sekolah C\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Get By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8100/serverside/classes/2"
+          },
+          "response": [
+            {
+              "name": "Get By Id",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": "http://localhost:8100/serverside/classes/2"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 May 2024 05:15:34 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 2,\n    \"className\": \"Kelas 1B\",\n    \"schoolName\": \"Sekolah A\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Save",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"className\": \"Class Baru 1\",\n    \"classType\": \"BAHASA\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://localhost:8100/serverside/classes/2"
+          },
+          "response": [
+            {
+              "name": "Save",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"className\": \"Class Baru 1\",\n    \"classType\": \"BAHASA\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "http://localhost:8100/serverside/classes/2"
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 May 2024 05:15:41 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 15,\n    \"className\": \"Class Baru 1\",\n    \"classType\": \"BAHASA\",\n    \"school\": {\n        \"id\": 2,\n        \"name\": \"Sekolah B\",\n        \"schoolType\": \"SMP\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "http://localhost:8100/serverside/classes/15"
+          },
+          "response": [
+            {
+              "name": "Delete",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": "http://localhost:8100/serverside/classes/15"
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "plain",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Fri, 10 May 2024 05:15:47 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
