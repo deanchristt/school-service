@@ -1,4 +1,4 @@
-# School-Class Project README
+# School-Service Project README
 
 ---
 
@@ -17,10 +17,13 @@ This project, "school-class", facilitates student data management within an educ
 ## Testing
 1. Utilize the provided SQL scripts in `main/resources` for querying the database.
 2. Find a Postman collection for API testing in the same directory for convenient testing and validation.
+3. To test the UI, access the following URLs:
+   - [http://localhost:8100/serverside/classes/ui](http://localhost:8100/serverside/classes/ui)
+   - [http://localhost:8100/serverside/schools/ui](http://localhost:8100/serverside/schools/ui)
 
 ---
 
 ## Note
 - Update database configurations in the project settings to match your local setup.
+- HTML templates can be found in the `main/resources/template` directory.
 - For any issues or queries, feel free to contact me.
-
